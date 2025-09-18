@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BolsilloFino - Contáctanos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e0f7ff;
+        }
+
+        .container-section {
+            padding: 4rem 1rem;
+        }
+
+        .heading {
+            color: #0077b6;
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .contact-heading {
+            color: #ffd700;
+            -webkit-text-stroke: 2px #0077b6;
+            -webkit-text-stroke: 2px #0077b6;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            color: #4b5563;
+        }
+
+        .avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffd700;
+            margin: 0 auto 0.75rem auto;
+        }
+
+        .person-name {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .person-role {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .person-description {
+            font-size: 0.875rem;
+            color: #4b5563;
+            margin-top: 0.5rem;
+        }
+
+        .person-email {
+            font-size: 0.875rem;
+            color: #0077b6;
+            margin-top: 0.75rem;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid #0077b6;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .person-email:hover {
+            background-color: #0077b6;
+            color: white;
+        }
+
+        .footer {
+            background-color: #0077b6;
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            border-radius: 1rem 1rem 0 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body class="bg-[#e0f7ff] text-[#333]">
+    <header class="py-12 px-4 rounded-b-3xl">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center space-x-4 mb-6 md:mb-0">
+                <h1 class="text-4xl sm:text-5xl font-extrabold contact-heading">CONTÁCTANOS</h1>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto mt-8 flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-8">
+            <div class="p-4 bg-white rounded-xl shadow-inner w-full">
+                <h2 class="text-xl font-bold text-[#ffd700] mb-2">Redes Sociales</h2>
+                <ul class="list-none text-sm text-[#4b5563] space-y-1">
+                    <li><strong>Instagram:</strong> @bolsillofino.oficial</li>
+                    <li><strong>LinkedIn:</strong> BolsilloFino</li>
+                    <li><strong>Twitter:</strong> @BolsilloFino</li>
+                    <li><strong>TikTok:</strong> @bolsillo_fino.tips</li>
+                    <li class="mt-2 text-xs italic">Síguenos para tips diarios sobre educación financiera e inversión.
+                    </li>
+                </ul>
+            </div>
+            <div class="p-4 bg-white rounded-xl shadow-inner w-full">
+                <h2 class="text-xl font-bold text-[#ffd700] mb-2">Soporte General</h2>
+                <p class="text-sm text-[#4b5563]">hola@bolsillofino.com</p>
+                <p class="text-xs text-[#6b7280] mt-1">Para consultas generales, dudas sobre funcionalidades o
+                    simplemente para conocer más sobre BolsilloFino. Te respondemos en menos de 24 horas.</p>
+            </div>
+        </div>
+    </header>
+    <section class="container-section max-w-7xl mx-auto">
+        <h2 class="heading text-[#0077b6] text-3xl font-bold mb-8">¿En qué podemos ayudarte?</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3 class="card-title text-[#ffd700]">Educación Financiera</h3>
+                <p class="card-text">Desde presupuestos básicos hasta estrategias de inversión. Te guiamos para que
+                    tomes el control de tu dinero.</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title text-[#ffd700]">Planificación de Metas</h3>
+                <p class="card-text">Te ayudamos a definir y alcanzar tus sueños, ya sea un viaje, un emprendimiento o
+                    tu retiro soñado.</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title text-[#ffd700]">Soporte y Comunidad</h3>
+                <p class="card-text">Conéctate con nuestra comunidad y recibe apoyo de otras mujeres que están en el
+                    mismo camino.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container-section max-w-7xl mx-auto">
+        <h2 class="heading text-[#0077b6] text-3xl font-bold mb-8">Contacta directamente a nuestro equipo</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="https://w7.pngwing.com/pngs/439/19/png-transparent-avatar-user-profile-icon-women-wear-frock-face-holidays-women-accessories-thumbnail.png"
+                    alt="Giomara, CEO" class="avatar">
+                <div class="person-name text-[#1f2937]">Giomara</div>
+                <div class="person-role text-[#6b7280]">CEO</div>
+                <p class="person-description">Para consultas sobre la visión de BolsilloFino y futuras alianzas.</p>
+                <a href="mailto:giomara@bolsillofino.com" class="person-email">giomara@bolsillofino.com</a>
+            </div>
+            <div class="card">
+                <img src="https://st5.depositphotos.com/3369547/79153/v/450/depositphotos_791530154-stock-illustration-business-woman-wearing-pink-suit.jpg"
+                    alt="Ainara, Fundadora" class="avatar">
+                <div class="person-name text-[#1f2937]">Ainara</div>
+                <div class="person-role text-[#6b7280]">Fundadora</div>
+                <p class="person-description">Para consultas técnicas, integraciones y funcionalidades avanzadas de
+                    nuestra plataforma.</p>
+                <a href="mailto:ainara@bolsillofino.com" class="person-email">ainara@bolsillofino.com</a>
+            </div>
+            <div class="card">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock1701/djvstock170108921/70085525-business-executive-woman-icon-vector-illustration-graphic-design.jpg"
+                    alt="Mayu, Jefa de Marketing" class="avatar">
+                <div class="person-name text-[#1f2937]">Mayu</div>
+                <div class="person-role text-[#6b7280]">Jefa de Marketing</div>
+                <p class="person-description">Para feedback sobre la experiencia de usuario y sugerencias de mejora de
+                    nuestros productos.</p>
+                <a href="mailto:mayu@bolsillofino.com" class="person-email">mayu@bolsillofino.com</a>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQME6AUW1tHpK6k2VuF7D74DGb0r9xPiggXRg&s"
+                    alt="Fiorella, Directora Creativa" class="avatar">
+                <div class="person-name text-[#1f2937]">Fiorella</div>
+                <div class="person-role text-[#6b7280]">Directora Creativa</div>
+                <p class="person-description">Para consultas sobre la comunidad, contenido y colaboraciones.</p>
+                <a href="mailto:fiorella@bolsillofino.com" class="person-email">fiorella@bolsillofino.com</a>
+            </div>
+            <div class="card">
+                <img src="https://img.lovepik.com/png/20231024/Red-portrait-card-cartoon-character-avatar-bust-blank-face_332485_wh860.png"
+                    alt="Angeles, Jefa de Diseño" class="avatar">
+                <div class="person-name text-[#1f2937]">Angeles</div>
+                <div class="person-role text-[#6b7280]">Jefa de Diseño</div>
+                <p class="person-description">Para consultas relacionadas con el diseño de la web, app o cualquier otro
+                    material gráfico.</p>
+                <a href="mailto:angeles@bolsillofino.com" class="person-email">angeles@bolsillofino.com</a>
+            </div>
+        </div>
+    </section>
+    <section class="container-section max-w-7xl mx-auto">
+        <h2 class="heading text-[#0077b6] text-3xl font-bold mb-8">Preguntas Frecuentes</h2>
+        <div class="card-grid">
+            <div class="card col-span-1">
+                <h3 class="card-title text-[#ffd700]">¿Cómo puedo empezar mi camino en Bolsillo Fino?</h3>
+                <p class="card-text">Te recomendamos empezar por nuestro blog o nuestra sección de "Educación
+                    Financiera" para conocer los conceptos básicos.</p>
+            </div>
+            <div class="card col-span-1">
+                <h3 class="card-title text-[#ffd700]">¿Ofrecen asesoría personalizada?</h3>
+                <p class="card-text">Sí, ofrecemos planes de asesoría personalizados para ayudarte a crear un plan
+                    financiero a tu medida. ¡Contáctanos para más detalles!</p>
+            </div>
+            <div class="card col-span-1">
+                <h3 class="card-title text-[#ffd700]">¿La información es segura?</h3>
+                <p class="card-text">¡Absolutamente! La seguridad y privacidad de tu información son nuestra máxima
+                    prioridad.</p>
+            </div>
+            <div class="card col-span-1">
+                <h3 class="card-title text-[#ffd700]">¿Cómo puedo unirme a la comunidad?</h3>
+                <p class="card-text">Puedes seguirnos en nuestras redes sociales, donde compartimos tips y organizamos
+                    eventos para la comunidad.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <form id="registroForm">
+        <label for="nombre">1. Nombre completo:</label><br>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+
+        <label for="email">2. Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="edad">3. Edad:</label><br>
+        <input type="number" id="edad" name="edad" min="16" required>
+        <br><br>
+
+        <label for="pais">4. País de residencia:</label><br>
+        <input type="text" id="pais" name="pais" required>
+        <br><br>
+
+        <label for="ocupacion">5. ¿Cuál es tu ocupación actual?</label><br>
+        <select id="ocupacion" name="ocupacion" required>
+            <option value="">-- Selecciona una opción --</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="empleada">Empleada</option>
+            <option value="emprendedora">Emprendedora</option>
+            <option value="desempleada">Desempleada</option>
+            <option value="otro">Otro</option>
+        </select>
+        <br><br>
+
+        <label for="objetivo">6. ¿Qué te gustaría lograr financieramente?</label><br>
+        <select id="objetivo" name="objetivo" required>
+            <option value="">-- Selecciona un objetivo --</option>
+            <option value="ahorrar">Ahorrar dinero</option>
+            <option value="emprender">Empezar un emprendimiento</option>
+            <option value="invertir">Aprender a invertir</option>
+            <option value="educacion">Educación financiera</option>
+            <option value="otro">Otro</option>
+        </select>
+        <br><br>
+
+        <label for="comentarios">7. ¿Quieres contarnos algo más?</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50"
+            placeholder="¡Te leemos con amor! 💌"></textarea>
+        <br><br>
+
+        <button type="submit">Registrarme</button>
+    </form>
+
+    <br>
+    <h2 id="mensaje"></h2>
+
+
+    <footer style="background-color:#56D0C3; color:#1C1C1C; text-align:center; padding:15px; margin-top:40px;">
+        <p>&copy; 2025 Bolsillo Fino - 1er proyecto grupal de CTC</p>
+    </footer>
+
+
+    <script>
+        document.getElementById("registroForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Evita que se recargue la página
+
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var edad = document.getElementById("edad").value;
+            var pais = document.getElementById("pais").value;
+            var ocupacion = document.getElementById("ocupacion").value;
+            var objetivo = document.getElementById("objetivo").value;
+            var comentarios = document.getElementById("comentarios").value;
+
+            // Validación básica (puedes expandirla)
+            if (nombre && email && edad && pais && ocupacion && objetivo) {
+                document.getElementById("mensaje").innerHTML = `🎉 ¡Gracias por registrarte, ${nombre}! Pronto recibirás novedades en tu correo: ${email}`;
+                document.getElementById("registroForm").reset();
+            } else {
+                document.getElementById("mensaje").innerHTML = "⚠️ Por favor, completa todos los campos obligatorios.";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+      <nav>
+    <div class="logo">
+      <img src="multimedia/bolsillofino.jpg" alt="Logo">
+      <h1>Bolsillo Fino</h1>
+    </div>
+    <div class="nav-buttons">
+      <button onclick="mostrarSeccion('cyber-divas')">Cyber Divas</button>
+      <button onclick="mostrarSeccion('quienes-son')">¿Quiénes son?</button>
+      <button onclick="mostrarSeccion('contacto')">Contáctanos</button>
+      <button onclick="mostrarSeccion('testimonios')">Testimonios</button>
+    </div>
+  </nav>
+
+  <h1 style="text-align: center; color: aquamarine; padding-top: 20px;">
+    BIENVENIDA
+  </h1>
+
+  <h2 style="text-align: center; color: deepskyblue; margin: 10px; padding-top: 20px;">
+    TE VENIMOS A PRESENTAR UNA GRAN MANERA DE SUPERARTE EN TODO ASPECTO!
+  </h2>
+
+  <!-- Contenedor para mostrar las secciones -->
+  <div id="contenedor">
+    <div id="cyber-divas" class="seccion"></div>
+    <div id="quienes-son" class="seccion" style="display: none;"></div>
+    <div id="contacto" class="seccion" style="display: none;"></div>
+    <div id="testimonios" class="seccion" style="display: none;"></div>
+  </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

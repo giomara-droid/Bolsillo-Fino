@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Cyber Divas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4fc3f7, #0288d1);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            animation: aparecer 0.6s ease;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #0288d1;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #0288d1;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0277bd;
+            transform: scale(1.05);
+        }
+
+        #puntaje {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="card" class="card">
+        <h2>Cuestionario sobre "Cyber Divas"</h2>
+        <div id="pregunta">
+            <p></p>
+            <button id="op1"></button><br><br>
+            <button id="op2"></button><br><br>
+            <button id="op3"></button><br><br>
+        </div>
+    </div>
+
+    <div id="puntaje"></div>
+
+    <script>
+        // Definición de las preguntas
+        const preguntas = [
+            {
+                pregunta: "¿Cuál es el propósito principal del proyecto 'Cyber Divas'?",
+                opciones: [
+                    "Crear una red social para mujeres.",
+                    "Impulsar el empoderamiento financiero de las mujeres.",
+                    "Ofrecer productos de belleza en línea."
+                ],
+                respuestaCorrecta: "Impulsar el empoderamiento financiero de las mujeres."
+            },
+            {
+                pregunta: "¿Qué nombre recibe la propuesta de negocio de 'Cyber Divas'?",
+                opciones: [
+                    "Bolsillo Inteligente",
+                    "Bolsillo Fino",
+                    "Monedero Divino"
+                ],
+                respuestaCorrecta: "Bolsillo Fino"
+            },
+            {
+                pregunta: "¿Qué tipo de herramientas ofrece 'Bolsillo Fino' a las mujeres?",
+                opciones: [
+                    "Juegos en línea y entretenimiento.",
+                    "Cursos de cocina y manualidades.",
+                    "Soluciones de gestión de finanzas personales."
+                ],
+                respuestaCorrecta: "Soluciones de gestión de finanzas personales."
+            },
+            {
+                pregunta: "¿Qué busca 'Cyber Divas' promover además del empoderamiento financiero?",
+                opciones: [
+                    "La competencia entre mujeres.",
+                    "La igualdad de oportunidades.",
+                    "La moda y el estilo de vida."
+                ],
+                respuestaCorrecta: "La igualdad de oportunidades."
+            }
+        ];
+
+        // Variables para el juego
+        let puntaje = 0;
+        let indicePreguntaActual = 0;
+
+        // Elementos del DOM
+        const preguntaElemento = document.querySelector("#pregunta p");
+        const botonOp1 = document.getElementById("op1");
+        const botonOp2 = document.getElementById("op2");
+        const botonOp3 = document.getElementById("op3");
+        const puntajeElemento = document.getElementById("puntaje");
+        const cardElemento = document.getElementById("card");
+
+        // Función para cargar la siguiente pregunta
+        function siguientePregunta() {
+            if (indicePreguntaActual < preguntas.length) {
+                const preguntaActual = preguntas[indicePreguntaActual];
+                preguntaElemento.textContent = preguntaActual.pregunta;
+                botonOp1.textContent = preguntaActual.opciones[0];
+                botonOp2.textContent = preguntaActual.opciones[1];
+                botonOp3.textContent = preguntaActual.opciones[2];
+            } else {
+                mostrarResultados();
+            }
+        }
+
+        // Manejar respuesta
+        function manejarRespuesta(opcionSeleccionada) {
+            const preguntaActual = preguntas[indicePreguntaActual];
+            if (opcionSeleccionada === preguntaActual.respuestaCorrecta) {
+                puntaje += 1;
+            }
+            indicePreguntaActual++;
+            siguientePregunta();
+        }
+
+        // Mostrar resultados
+        function mostrarResultados() {
+            let mensaje = "";
+            if (puntaje === preguntas.length) {
+                mensaje = "¡Felicidades, conoces a fondo el proyecto 'Cyber Divas'! 👏";
+            } else if (puntaje > preguntas.length / 2) {
+                mensaje = "Muy bien, tienes una buena idea del proyecto. 👍";
+            } else {
+                mensaje = "Puedes aprender más sobre 'Cyber Divas' para mejorar tu puntaje. 😉";
+            }
+
+            cardElemento.innerHTML = `
+        <h2>Resultados del Cuestionario</h2>
+        <p>Tu puntaje final es: ${puntaje} de ${preguntas.length}</p>
+        <p>${mensaje}</p>
+    `;
+            puntajeElemento.style.display = "none";
+        }
+
+        // Event listeners
+        botonOp1.addEventListener("click", () => manejarRespuesta(botonOp1.textContent));
+        botonOp2.addEventListener("click", () => manejarRespuesta(botonOp2.textContent));
+        botonOp3.addEventListener("click", () => manejarRespuesta(botonOp3.textContent));
+
+        // Iniciar
+        siguientePregunta();
+    </script>
+
+</body>
+
+</html>
